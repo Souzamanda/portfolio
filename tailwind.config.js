@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   content: [
     './src/**/*.tsx'
@@ -6,11 +8,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: 'Roboto, sans-serif'
+        sans: 'Karla, sans-serif'
       },
 
       backgroundImage: {
         app: 'url(/app-bg.png)'
+      },
+
+      backgroundSize: {
+        '50': '50%'
       },
 
       colors: {
@@ -25,8 +31,23 @@ module.exports = {
           500:'#C400FF',
           700:'#331940',
         }
-      }
+      },
+
+      textShadow: {
+        DEFAULT: '6px 3px 15px #C400FF',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'text-shadow': (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') }
+      )
+    }),
+  ],
 }
