@@ -2,10 +2,10 @@
 import React from 'react';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { TbPhoneCall } from 'react-icons/tb';
-import {FaLinkedinIn} from 'react-icons/fa'
-import {VscGithub} from 'react-icons/vsc'
-import {FiMail} from 'react-icons/fi'
-import {AiOutlineWhatsApp} from 'react-icons/ai'
+import { FaLinkedinIn } from 'react-icons/fa';
+import { VscGithub } from 'react-icons/vsc';
+import { FiMail } from 'react-icons/fi';
+import { AiOutlineWhatsApp } from 'react-icons/ai';
 
 const contact = () => {
   return (
@@ -23,7 +23,7 @@ const contact = () => {
             coffee and talk about series, you can find me on social media or
             send a message in here!
           </p>
-          <div className='flex flex-col items-center md:items-start'>
+          <div className='flex flex-col items-center lg:items-start'>
             <div className='flex pt-4 pb-2 justify-center items-center'>
               <HiOutlineLocationMarker className='text-xl lg:text-2xl text-gray-500' />
               <p className='px-4 text-gray-600 text-center'>
@@ -42,6 +42,45 @@ const contact = () => {
             <VscGithub className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 hover:scale-110 ease-in duration-300' />
             <AiOutlineWhatsApp className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 hover:scale-110 ease-in duration-300' />
             <FiMail className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 hover:scale-110 ease-in duration-300' />
+          </div>
+        </div>
+
+        {/* right */}
+        <div className='col-span-3 w-full h-auto lg:p-4'>
+          <div className='px-4'>
+            <form>
+              <div className='flex flex-col'>
+                <label className='uppercase pb-2'>Name</label>
+                <input
+                  type='text'
+                  className='border-2 rounded-lg p-3 flex border-gray-400 focus:outline-none focus:border-teal-500'
+                />
+              </div>
+
+              <div className='flex flex-col py-2'>
+                <label className='uppercase py-2'>Email</label>
+                <input
+                  type='email'
+                  className='border-2 rounded-lg p-3 flex border-gray-400 focus:outline-none focus:border-teal-500 invalid:border-pink-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
+                />
+              </div>
+
+              <div className='flex flex-col py-2'>
+                <label className='uppercase py-2'>Subject</label>
+                <input
+                  type='text'
+                  className='border-2 rounded-lg p-3 flex border-gray-400 focus:outline-none focus:border-teal-500'
+                />
+              </div>
+
+              <div className='flex flex-col py-2'>
+                <label className='uppercase py-2'>Message</label>
+                <textarea
+                  className='border-2 rounded-lg p-3 border-gray-400 focus:outline-none focus:border-teal-500'
+                  rows={5}
+                />
+              </div>
+            </form>
           </div>
         </div>
       </div>
