@@ -9,7 +9,7 @@ interface ProjectItemProps {
 
 const ProjectItem = (props: ProjectItemProps) => {
   return (
-    <div className='relative flex item justify-center h-auto w-full rounded-xl bg-gradient-to-br from-teal-500/50 via-purple-500 to-teal-500/50 group hover:scale-105 ease-linear duration-500'>
+    <div className='relative flex item justify-center h-auto w-full rounded-xl bg-gradient-to-br from-teal-500/50 via-purple-500 to-teal-500/50 cursor-pointer group hover:scale-105 ease-linear duration-500'>
       <Image
         src={props.bgImg}
         alt='Rocket Pay app picture'
