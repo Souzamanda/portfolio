@@ -6,8 +6,9 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import { VscGithub } from 'react-icons/vsc';
 import { FiMail } from 'react-icons/fi';
 import { AiOutlineWhatsApp } from 'react-icons/ai';
-import sendIcon from '../assets/send.svg'
+import sendIcon from '../assets/send.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const contact = () => {
   return (
@@ -39,11 +40,32 @@ const contact = () => {
               </p>
             </div>
           </div>
+
           <div className='flex max-w-[200px] mx-auto lg:ml-0 py-8 justify-between items-center'>
-            <FaLinkedinIn className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 hover:scale-110 ease-in duration-300' />
-            <VscGithub className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 hover:scale-110 ease-in duration-300' />
-            <AiOutlineWhatsApp className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 hover:scale-110 ease-in duration-300' />
-            <FiMail className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 hover:scale-110 ease-in duration-300' />
+            <Link
+              href='https://www.linkedin.com/in/amanda-puttomatti/'
+              passHref
+              legacyBehavior>
+              <a target='_blank' rel='noopener noreferrer'>
+                <FaLinkedinIn className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 hover:scale-110 ease-in duration-300' />
+              </a>
+            </Link>
+
+            <Link href='https://github.com/Souzamanda' passHref legacyBehavior>
+              <a target='_blank' rel='noopener noreferrer'>
+                <VscGithub className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 hover:scale-110 ease-in duration-300' />
+              </a>
+            </Link>
+
+            <Link href='https://wa.me/5511985919388' passHref legacyBehavior>
+              <a target='_blank' rel='noopener noreferrer'>
+                <AiOutlineWhatsApp className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 hover:scale-110 ease-in duration-300' />
+              </a>
+            </Link>
+
+            <Link href='mailto:acsputtomatti@gmail.com?Subject=[P]%20Hello'>
+              <FiMail className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 hover:scale-110 ease-in duration-300' />
+            </Link>
           </div>
         </div>
 
@@ -110,7 +132,12 @@ const contact = () => {
               <div className='flex items-center justify-center md:justify-start'>
                 <button className='px-6 py-4 rounded-lg bg-gradient-to-br from-purple-500/75 via-purple-500 to-teal-500/50 text-white hover:from-teal-500 hover:to-purple-500/75 hover:scale-105 ease-linear duration-500 transition flex items-center'>
                   <p className='text-lg font-bold'>Send </p>
-                  <Image src={sendIcon} alt='' width={30} className='ml-4 text-gray-900' />
+                  <Image
+                    src={sendIcon}
+                    alt=''
+                    width={30}
+                    className='ml-4 text-gray-900'
+                  />
                 </button>
               </div>
             </form>
