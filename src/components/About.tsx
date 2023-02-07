@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 import React from 'react';
-import {TbFileDownload} from 'react-icons/tb'
+import { TbFileDownload } from 'react-icons/tb';
 import aboutImg from '../assets/about.png';
 
 const About = () => {
@@ -27,17 +27,26 @@ const About = () => {
             </p>
 
             <p className='py-2 text-lg text-gray-600 bg-white'>
-              Other than coding, I love playing Valorant, hanging out with my friends and family and watching series, if you don't know what to watch next, I can recommend you something good!.
+              Other than coding, I love playing Valorant, hanging out with my
+              friends and family and watching series, if you don't know what to
+              watch next, I can recommend you something good!.
             </p>
           </div>
           <div className='flex items-center justify-center md:justify-start'>
-          <button className='px-6 py-4 rounded-lg bg-gradient-to-br from-purple-500/75 via-purple-500 to-teal-500/50 text-white font-bold hover:from-teal-500 hover:to-purple-500/75 hover:scale-105 ease-linear duration-500 transition flex items-center'>
-            <p className='text-lg'>Resume </p>
-            <TbFileDownload className='text-2xl ml-4'/>
-          </button></div>
+            <a download href='../assets/AmandaCordeiro_Curriculo.pdf'>
+              <button className='px-6 py-4 rounded-lg bg-gradient-to-br from-purple-500/75 via-purple-500 to-teal-500/50 text-white font-bold hover:from-teal-500 hover:to-purple-500/75 hover:scale-105 ease-linear duration-500 transition flex items-center'>
+                <p className='text-lg'>Resume </p>
+                <TbFileDownload className='text-2xl ml-4' />
+              </button>
+            </a>
+          </div>
         </div>
         <div className='max-w-[80%] md:max-w-[100%] h-auto mx-auto my-16 md:my-auto'>
-          <Image src={aboutImg} alt='/' className='rounded-xl shadow-md shadow-teal-500/50 ' />
+          <Image
+            src={aboutImg}
+            alt='/'
+            className='rounded-xl shadow-md shadow-teal-500/50 '
+          />
         </div>
       </div>
     </div>
