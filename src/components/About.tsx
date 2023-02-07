@@ -31,7 +31,7 @@ const About = () => {
             </p>
           </div>
           <div className='flex items-center justify-center md:justify-start'>
-          <button className='px-6 py-4 rounded bg-gradient-to-br from-purple-500/75 via-purple-500 to-teal-500/50 text-white font-bold hover:from-teal-500 hover:to-purple-500/75 hover:scale-105 ease-linear duration-500 transition flex items-center'>
+          <button className='px-6 py-4 rounded-lg bg-gradient-to-br from-purple-500/75 via-purple-500 to-teal-500/50 text-white font-bold hover:from-teal-500 hover:to-purple-500/75 hover:scale-105 ease-linear duration-500 transition flex items-center'>
             <p className='text-lg'>Resume </p>
             <TbFileDownload className='text-2xl ml-4'/>
           </button></div>

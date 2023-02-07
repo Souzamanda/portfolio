@@ -49,5 +49,7 @@ module.exports = {
         { values: theme('textShadow') }
       )
     }),
+    
+    require('@tailwindcss/forms'),
   ],
 }
