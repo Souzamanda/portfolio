@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useState } from 'react';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { TbPhoneCall, TbLocation } from 'react-icons/tb';
 import { FaLinkedinIn } from 'react-icons/fa';
@@ -9,8 +9,90 @@ import { AiOutlineWhatsApp } from 'react-icons/ai';
 import sendIcon from '../assets/send.svg';
 import Image from 'next/image';
 import Link from 'next/link';
+import toast from 'react-hot-toast';
+import { sendContactMail } from '../services/sendMail';
 
-const contact = () => {
+const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!name || !email || !subject || !message) {
+      toast.error('Please, fill all fields to send your message', {
+        style: {
+          border: '1px solid #FF3366',
+          background: '#ffeef2',
+          padding: '16px',
+          color: '#FF3366',
+        },
+        iconTheme: {
+          primary: '#FF3366',
+          secondary: '#ffeef2',
+        },
+      });
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+      const toastId = toast.loading('Loading...', {
+        style: {
+          border: '1px solid #D8B4FE',
+          background: '#fff',
+          padding: '16px',
+          color: '#C400FF',
+        },
+        iconTheme: {
+          primary: '#0CECDD',
+          secondary: '#C400FF'
+        }
+      });
+
+      await sendContactMail(name, email, subject, message)
+      setName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
+
+      toast.success('Message sent!', {
+        id: toastId,
+        style: {
+          border: '1px solid #8DCD8D',
+          background: '#f3faf3',
+          padding: '16px',
+          color: '#8DCD8D',
+        },
+        iconTheme: {
+          primary: '#8DCD8D',
+          secondary: '#f3faf3',
+        },
+      });
+
+    } catch {
+      toast.error('An error occurred when sending your message.\n Please try again!', {
+        style: {
+          border: '1px solid #FF3366',
+          background: '#ffeef2',
+          padding: '16px',
+          color: '#FF3366',
+        },
+        iconTheme: {
+          primary: '#FF3366',
+          secondary: '#ffeef2',
+        },
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div id='contact' className='w-full p-10 py-16 mt-16'>
       <div className='max-w-[1240px] md:pl-[100px] m-auto grid md:grid-cols-5 gap-8'>
@@ -72,13 +154,15 @@ const contact = () => {
         {/* right */}
         <div className='col-span-3 w-full h-auto lg:p-4 '>
           <div className='px-4'>
-            <form className='grid gap-4'>
+            <form onSubmit={handleSubmit} method='POST' className='grid gap-4'>
               <div className='relative'>
                 <input
                   type='text'
                   id='name'
                   placeholder='Name'
-                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-500/50 text-gray-900 focus:outline-none focus:ring-1 focus:border-teal-500 focus:ring-teal-500 placeholder-transparent'
+                  onChange={({ target }) => setName(target.value)}
+                  value={name}
+                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-300 text-gray-900 focus:outline-none focus:ring-1 focus:border-teal-500 focus:ring-teal-500 placeholder-transparent'
                 />
                 <label
                   htmlFor='name'
@@ -92,7 +176,9 @@ const contact = () => {
                   type='email'
                   id='email'
                   placeholder='Email'
-                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-500/50 text-gray-900 focus:outline-none focus:ring-1 focus:border-teal-500 focus:ring-teal-500 placeholder-transparent'
+                  onChange={({ target }) => setEmail(target.value)}
+                  value={email}
+                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-300 text-gray-900 focus:outline-none focus:ring-1 focus:border-teal-500 focus:ring-teal-500 placeholder-transparent'
                 />
                 <label
                   htmlFor='email'
@@ -106,7 +192,9 @@ const contact = () => {
                   type='text'
                   id='subject'
                   placeholder='Subject'
-                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-500/50 text-gray-900 focus:outline-none focus:ring-1 focus:border-teal-500 focus:ring-teal-500 placeholder-transparent'
+                  onChange={({ target }) => setSubject(target.value)}
+                  value={subject}
+                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-300 text-gray-900 focus:outline-none focus:ring-1 focus:border-teal-500 focus:ring-teal-500 placeholder-transparent'
                 />
                 <label
                   htmlFor='subject'
@@ -119,7 +207,9 @@ const contact = () => {
                 <textarea
                   id='message'
                   placeholder='Message'
-                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-500/50 focus:outline-none focus:ring-1 focus:border-teal-500 text-gray-900 focus:ring-teal-500 placeholder-transparent'
+                  onChange={({ target }) => setMessage(target.value)}
+                  value={message}
+                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-300 focus:outline-none focus:ring-1 focus:border-teal-500 text-gray-900 focus:ring-teal-500 placeholder-transparent'
                   rows={5}
                 />
                 <label
@@ -130,7 +220,10 @@ const contact = () => {
               </div>
 
               <div className='flex items-center justify-center md:justify-start'>
-                <button className='px-6 py-4 rounded-lg bg-gradient-to-br from-purple-500/75 via-purple-500 to-teal-500/50 text-white hover:from-teal-500 hover:to-purple-500/75 hover:scale-105 ease-linear duration-500 transition flex items-center'>
+                <button
+                  type='submit'
+                  disabled={loading}
+                  className='px-6 py-4 rounded-lg bg-gradient-to-br from-purple-500/75 via-purple-500 to-teal-500/50 text-white hover:from-teal-500 hover:to-purple-500/75 hover:scale-105 ease-linear duration-500 transition flex items-center disabled:opacity-50'>
                   <p className='text-lg font-bold'>Send </p>
                   <Image
                     src={sendIcon}
@@ -148,4 +241,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;
