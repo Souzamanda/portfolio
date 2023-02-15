@@ -162,7 +162,7 @@ const Contact = () => {
                   placeholder='Name'
                   onChange={({ target }) => setName(target.value)}
                   value={name}
-                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-300 text-gray-900 focus:outline-none focus:ring-1 focus:border-teal-500 focus:ring-teal-500 placeholder-transparent'
+                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-300 text-gray-900 focus:outline-none focus:ring-1 focus:border-teal-500 focus:ring-teal-500 placeholder-transparent caret-teal-600'
                 />
                 <label
                   htmlFor='name'
@@ -178,7 +178,7 @@ const Contact = () => {
                   placeholder='Email'
                   onChange={({ target }) => setEmail(target.value)}
                   value={email}
-                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-300 text-gray-900 focus:outline-none focus:ring-1 focus:border-teal-500 focus:ring-teal-500 placeholder-transparent'
+                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-300 text-gray-900 focus:outline-none focus:ring-1 focus:border-teal-500 focus:ring-teal-500 placeholder-transparent caret-teal-600'
                 />
                 <label
                   htmlFor='email'
@@ -194,7 +194,7 @@ const Contact = () => {
                   placeholder='Subject'
                   onChange={({ target }) => setSubject(target.value)}
                   value={subject}
-                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-300 text-gray-900 focus:outline-none focus:ring-1 focus:border-teal-500 focus:ring-teal-500 placeholder-transparent'
+                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-300 text-gray-900 focus:outline-none focus:ring-1 focus:border-teal-500 focus:ring-teal-500 placeholder-transparent caret-teal-600'
                 />
                 <label
                   htmlFor='subject'
@@ -209,7 +209,7 @@ const Contact = () => {
                   placeholder='Message'
                   onChange={({ target }) => setMessage(target.value)}
                   value={message}
-                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-300 focus:outline-none focus:ring-1 focus:border-teal-500 text-gray-900 focus:ring-teal-500 placeholder-transparent'
+                   className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-300 focus:outline-none focus:ring-1 focus:border-teal-500 text-gray-900 focus:ring-teal-500 placeholder-transparent caret-teal-600 resize-none'
                   rows={5}
                 />
                 <label
@@ -223,7 +223,7 @@ const Contact = () => {
                 <button
                   type='submit'
                   disabled={loading}
-                  className='px-6 py-4 rounded-lg bg-gradient-to-br from-purple-500/75 via-purple-500 to-teal-500/50 text-white hover:from-teal-500 hover:to-purple-500/75 hover:scale-105 ease-linear duration-500 transition flex items-center disabled:opacity-50'>
+                  className='px-6 py-4 rounded-lg bg-gradient-to-br from-purple-500/75 via-purple-500 to-teal-500/50 text-white hover:from-teal-500 hover:to-purple-500/75 hover:scale-105 ease-linear duration-500 transition flex items-center disabled:opacity-50 disabled:cursor-not-allowed'>
                   <p className='text-lg font-bold'>Send </p>
                   <Image
                     src={sendIcon}

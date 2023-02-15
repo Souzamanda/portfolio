@@ -1,9 +1,11 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import ProjectItem from './ProjectItem';
 import rocketPayImg from '../assets/rocketpay.jpg';
 
 const Projects = () => {
+  
+
   return (
     <div id='projects' className='w-full p-10 py-16'>
       <div className='max-w-[1240px] md:pl-[100px] m-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -14,8 +16,10 @@ const Projects = () => {
             Projects
           </h2>
         </div>
-        <div className='pt-8'>
+        
+        <div className='pt-8 -z-1'>
           <ProjectItem title='RocketPay' bgImg={rocketPayImg} stack='React, Vite' />
+          
         </div>
         <div className='pt-8'>
           <ProjectItem title='RocketPay' bgImg={rocketPayImg} stack='React, Vite' />
