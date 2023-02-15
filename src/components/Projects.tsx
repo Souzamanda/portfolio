@@ -13,7 +13,7 @@ const Projects = () => {
       <div className='max-w-[1240px] md:pl-[100px] m-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-8'>
         <div className='col-span-2 lg:col-span-3'>
           <h2
-            className='text-gray-700 tracking-widest text-xl sm:text-2xl md:text-3xl text-shadow
+            className='text-gray-700 tracking-widest text-xl sm:text-2xl md:text-3xl text-shadow dark:text-gray-200 dark:text-shadow-dark
           '>
             Projects
           </h2>
@@ -31,7 +31,7 @@ const Projects = () => {
                   <a
                     target='https://www.rocketseat.com.br'
                     rel='noopener noreferrer'
-                    className='text-purple-500 hover:text-teal-500 ease-in duration-300'>
+                    className='text-yellow-500 hover:text-teal-500 ease-in duration-300'>
                     Rocketseat's
                   </a>{' '}
                   explorer lab. There were 3 classes in which a component was

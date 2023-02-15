@@ -5,6 +5,7 @@ module.exports = {
   content: [
     './src/**/*.tsx'
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -36,6 +37,7 @@ module.exports = {
 
       textShadow: {
         DEFAULT: '6px 3px 15px #C400FF',
+        dark: '6px 3px 8px #0CECDD',
       },
     },
   },

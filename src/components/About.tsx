@@ -10,26 +10,26 @@ const About = () => {
       <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8 md:pl-[100px]'>
         <div className='col-span-2'>
           <h2
-            className='text-gray-700 tracking-widest text-xl sm:text-2xl md:text-3xl text-shadow
+            className='text-gray-700 tracking-widest text-xl sm:text-2xl md:text-3xl text-shadow dark:text-gray-200 dark:text-shadow-dark
           '>
             About me
           </h2>
           <div className='py-8'>
-            <p className='py-2 text-lg text-gray-600 bg-white'>
+            <p className='py-2 text-lg text-gray-600 bg-white dark:bg-purple-700 dark:text-gray-100'>
               Hello!! I am a Software Engineer graduated at Centennial College
               in Toronto, Canada, but now I am back in Brazil, my home country.
             </p>
 
-            <p className='py-2 text-lg text-gray-600 bg-white'>
+            <p className='py-2 text-lg text-gray-600 bg-white dark:bg-purple-700 dark:text-gray-100'>
               I am motivated, focused, and passionate about learning new things.
               My degree abroad allowed me to increase my fluency in the English
               language, improving my verbal and written communication.
             </p>
 
-            <p className='py-2 text-lg text-gray-600 bg-white'>
+            <p className='py-2 text-lg text-gray-600 bg-white dark:bg-purple-700 dark:text-gray-100'>
               Other than coding, I love playing Valorant, hanging out with my
               friends and family and watching series, if you don't know what to
-              watch next, I can recommend you something good!.
+              watch next, I can recommend you something good!
             </p>
           </div>
           <div className='flex items-center justify-center md:justify-start'>
@@ -45,7 +45,7 @@ const About = () => {
           <Image
             src={aboutImg}
             alt='/'
-            className='rounded-xl shadow-md shadow-teal-500/50 '
+            className='rounded-xl shadow-md shadow-teal-500/50 dark:shadow-yellow-500'
           />
         </div>
       </div>
