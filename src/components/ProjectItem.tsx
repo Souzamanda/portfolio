@@ -6,6 +6,9 @@ interface ProjectItemProps {
   title: string;
   bgImg: StaticImageData;
   stack: string;
+  description: any;
+  liveLink: string;
+  repoLink: string;
 }
 
 const ProjectItem = (props: ProjectItemProps) => {
@@ -28,7 +31,7 @@ const ProjectItem = (props: ProjectItemProps) => {
           </p>
         </div>
       </div>
-      <Modal open={openModal} onClose={() => setOpenModal(false)}/>
+      <Modal open={openModal} onClose={() => setOpenModal(false)} bgImg={props.bgImg} title={props.title} stack={props.stack} description={props.description} liveLink={props.liveLink} repoLink={props.repoLink}/>
     </div>
   );
 };
