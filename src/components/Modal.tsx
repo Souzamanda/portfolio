@@ -1,17 +1,24 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 import React from 'react';
-import { AiOutlineClose } from 'react-icons/ai';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 import { VscGithub } from 'react-icons/vsc';
+import { IoClose } from 'react-icons/io5';
 
 
-const Modal = ({ open, onClose, bgImg, title, stack, description, liveLink, repoLink }) => {
+const Modal = ({ open, onClose, closeColor = 'dark', bgImg, title, stack, description, liveLink, repoLink }) => {
+  const handleClose = (e) => {
+    e.preventDefault();
+    onClose();
+  }
   if (!open) return null;
   return (
+    <div onClick={(e) => {
+          e.stopPropagation();
+        }}>
     <div
-      onClick={onClose}
-      className='bg-gray-900/50 fixed top-0 left-0 w-full h-screen z-[9999]'>
+      onClick={handleClose}
+      className='bg-gray-900/50 fixed top-0 left-0 w-full h-screen z-[100]'>
       <div
         onClick={(e) => {
           e.stopPropagation();
@@ -24,9 +31,9 @@ const Modal = ({ open, onClose, bgImg, title, stack, description, liveLink, repo
         />
 
         <div className='w-full'>
-          <div className='text-white text-lg'>
-            <AiOutlineClose
-              onClick={onClose}
+          <div className='text-2xl' style={{color: closeColor === 'dark' ? '#3D3D3F' : '#F3F4F6'}}>
+            <IoClose
+              onClick={handleClose}
               className='fixed top-4 right-4 cursor-pointer'
             />
           </div>
@@ -35,10 +42,10 @@ const Modal = ({ open, onClose, bgImg, title, stack, description, liveLink, repo
             <h4 className='text-center text-gray-700 tracking-widest text-xl sm:text-2xl md:text-3xl font-bold dark:text-gray-100'>
               {title}
             </h4>
-            <h6 className='text-center pb-8 text-xl text-gray-600 dark:text-gray-100'>
+            <h6 className='text-center pb-8 text-xl text-gray-600 dark:text-gray-200'>
               Technologies used: {stack}
             </h6>
-            <div className='max-w-lg mx-auto text-justify text-lg text-gray-600 dark:text-gray-100'>
+            <div className='max-w-lg mx-auto text-justify text-lg text-gray-600 dark:text-gray-200'>
               {description}
             </div>
           </div>
@@ -60,6 +67,7 @@ const Modal = ({ open, onClose, bgImg, title, stack, description, liveLink, repo
               </div>
             </a>
           </div>
+        </div>
         </div>
       </div>
     </div>

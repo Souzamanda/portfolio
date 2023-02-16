@@ -33,7 +33,7 @@ const Main = () => {
             passHref
             legacyBehavior>
             <a target='_blank' rel='noopener noreferrer'>
-              <div className='p-4 md:p-6 cursor-pointer text-xl lg:text-2xl text-gray-500 hover:text-teal-500 dark:text-gray-100 dark:hover:text-teal-500 hover:scale-110 ease-in duration-300'>
+              <div className='p-4 md:p-6 cursor-pointer text-xl lg:text-2xl text-gray-500 hover:text-teal-500 dark:text-gray-100 dark:hover:text-teal-500 hover:scale-110 ease-in duration-200'>
                 <FaLinkedinIn />
               </div>
             </a>
@@ -41,7 +41,7 @@ const Main = () => {
 
           <Link href='https://github.com/Souzamanda' passHref legacyBehavior>
             <a target='_blank' rel='noopener noreferrer'>
-              <div className='p-4 md:p-6 cursor-pointer text-gray-500 text-xl lg:text-2xl hover:text-teal-500 dark:text-gray-100 dark:hover:text-teal-500 hover:scale-110 ease-in duration-300'>
+              <div className='p-4 md:p-6 cursor-pointer text-gray-500 text-xl lg:text-2xl hover:text-teal-500 dark:text-gray-100 dark:hover:text-teal-500 hover:scale-110 ease-in duration-200'>
                 <VscGithub />
               </div>
             </a>
@@ -49,20 +49,20 @@ const Main = () => {
 
           <Link href='https://wa.me/5511985919388' passHref legacyBehavior>
             <a target='_blank' rel='noopener noreferrer'>
-              <div className='p-4 md:p-6 cursor-pointer text-gray-500 text-xl lg:text-2xl hover:text-teal-500 dark:text-gray-100 dark:hover:text-teal-500 hover:scale-110 ease-in duration-300'>
+              <div className='p-4 md:p-6 cursor-pointer text-gray-500 text-xl lg:text-2xl hover:text-teal-500 dark:text-gray-100 dark:hover:text-teal-500 hover:scale-110 ease-in duration-200'>
                 <AiOutlineWhatsApp />
               </div>
             </a>
           </Link>
 
           <Link href='mailto:acsputtomatti@gmail.com?Subject=[P]%20Hello'>
-            <div className='p-4 md:p-6 cursor-pointer text-gray-500 text-xl lg:text-2xl hover:text-teal-500 dark:text-gray-100 dark:hover:text-teal-500 hover:scale-110 ease-in duration-300'>
+            <div className='p-4 md:p-6 cursor-pointer text-gray-500 text-xl lg:text-2xl hover:text-teal-500 dark:text-gray-100 dark:hover:text-teal-500 hover:scale-110 ease-in duration-200'>
               <FiMail />
             </div>
           </Link>
         </div>
 
-        <div className='absolute bottom-8 text-yellow-500 text-2xl hover:text-purple-500 hover:scale-110 ease-in duration-300 animate-bounce'>
+        <div className='absolute bottom-8 text-purple-500 hover:text-yellow-500 dark:text-yellow-500 text-2xl dark:hover:text-purple-500 hover:scale-110 ease-in duration-300 animate-bounce'>
           <Link href='/#about'>
             <FaChevronDown />
           </Link>

@@ -99,7 +99,7 @@ const Contact = () => {
         {/* left */}
         <div className='col-span-3 md:col-span-2 w-full h-full p-4'>
           <h2
-            className='text-gray-700 tracking-widest text-xl sm:text-2xl md:text-3xl text-shadow 0CECDD
+            className='text-gray-700 tracking-widest text-xl sm:text-2xl md:text-3xl text-shadow
             dark:text-gray-200 dark:text-shadow-dark
           '>
             Let's Connect
@@ -130,24 +130,24 @@ const Contact = () => {
               passHref
               legacyBehavior>
               <a target='_blank' rel='noopener noreferrer'>
-                <FaLinkedinIn className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 dark:text-gray-300 dark:hover:text-teal-500 hover:scale-110 ease-in duration-300' />
+                <FaLinkedinIn className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 dark:text-gray-300 dark:hover:text-teal-500 hover:scale-110 ease-in duration-200' />
               </a>
             </Link>
 
             <Link href='https://github.com/Souzamanda' passHref legacyBehavior>
               <a target='_blank' rel='noopener noreferrer'>
-                <VscGithub className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 dark:text-gray-300 dark:hover:text-teal-500 hover:scale-110 ease-in duration-300' />
+                <VscGithub className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 dark:text-gray-300 dark:hover:text-teal-500 hover:scale-110 ease-in duration-200' />
               </a>
             </Link>
 
             <Link href='https://wa.me/5511985919388' passHref legacyBehavior>
               <a target='_blank' rel='noopener noreferrer'>
-                <AiOutlineWhatsApp className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 dark:text-gray-300 dark:hover:text-teal-500 hover:scale-110 ease-in duration-300' />
+                <AiOutlineWhatsApp className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 dark:text-gray-300 dark:hover:text-teal-500 hover:scale-110 ease-in duration-200' />
               </a>
             </Link>
 
             <Link href='mailto:acsputtomatti@gmail.com?Subject=[P]%20Hello'>
-              <FiMail className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 dark:text-gray-300 dark:hover:text-teal-500 hover:scale-110 ease-in duration-300' />
+              <FiMail className='text-xl lg:text-2xl text-gray-500 hover:text-teal-500 dark:text-gray-300 dark:hover:text-teal-500 hover:scale-110 ease-in duration-200' />
             </Link>
           </div>
         </div>
@@ -210,7 +210,7 @@ const Contact = () => {
                   placeholder='Message'
                   onChange={({ target }) => setMessage(target.value)}
                   value={message}
-                   className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-300 focus:outline-none focus:ring-1 focus:border-teal-500 text-gray-900 focus:ring-teal-500 placeholder-transparent caret-teal-600 resize-none dark:bg-purple-700 dark:text-gray-100 dark:border-purple-500  dark:focus:border-teal-500 dark:focus:ring-teal-500'
+                  className='peer form-input w-full border-2 rounded-lg p-3 flex border-purple-300 focus:outline-none focus:ring-1 focus:border-teal-500 text-gray-900 focus:ring-teal-500 placeholder-transparent caret-teal-600 resize-none dark:bg-purple-700 dark:text-gray-100 dark:border-purple-500  dark:focus:border-teal-500 dark:focus:ring-teal-500'
                   rows={5}
                 />
                 <label
@@ -224,6 +224,7 @@ const Contact = () => {
                 <button
                   type='submit'
                   disabled={loading}
+                  
                   className='px-6 py-4 rounded-lg bg-gradient-to-br from-purple-500/75 via-purple-500 to-teal-500/50 text-white hover:from-teal-500 hover:to-purple-500/75 hover:scale-105 ease-linear duration-500 transition flex items-center disabled:opacity-50 disabled:cursor-not-allowed'>
                   <p className='text-lg font-bold'>Send </p>
                   <Image

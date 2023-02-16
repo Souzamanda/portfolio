@@ -9,6 +9,7 @@ interface ProjectItemProps {
   description: any;
   liveLink: string;
   repoLink: string;
+  closeColor?: 'dark' | 'light'
 }
 
 const ProjectItem = (props: ProjectItemProps) => {
@@ -31,7 +32,7 @@ const ProjectItem = (props: ProjectItemProps) => {
           </p>
         </div>
       </div>
-      <Modal open={openModal} onClose={() => setOpenModal(false)} bgImg={props.bgImg} title={props.title} stack={props.stack} description={props.description} liveLink={props.liveLink} repoLink={props.repoLink}/>
+      <Modal open={openModal} onClose={() => setOpenModal(false)} bgImg={props.bgImg} closeColor={props.closeColor} title={props.title} stack={props.stack} description={props.description} liveLink={props.liveLink} repoLink={props.repoLink}/>
     </div>
   );
 };
