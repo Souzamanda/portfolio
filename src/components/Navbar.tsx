@@ -151,10 +151,10 @@ const Navbar = () => {
             <div
               className={
                 !nav
-                  ? 'fixed top-[-10px] left-0 w-[100%] h-[35%]  border-t rounded-2xl bg-gray-100 ease-in duration-500 dark:bg-purple-600'
+                  ? 'fixed top-[-10px] left-0 w-[100%] h-fit px-10 pt-8 pb-3 border-t rounded-2xl bg-gray-100 ease-in duration-500 dark:bg-purple-600'
                   : 'fixed top-[-100%] ease-out duration-500'
               }>
-              <div onClick={handleNav} className='p-10 flex justify-between'>
+              <div onClick={handleNav} className='pb-5 flex justify-between'>
                 <div className='text-xl'>{themeChanger()}</div>
 
                 <div className='text-2xl cursor-pointer text-gray-900 font-bold hover:text-purple-500 ease-in duration-150 dark:text-gray-100 dark:hover:text-yellow-500'>
