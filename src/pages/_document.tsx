@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import { RiCodeFill } from 'react-icons/ri';
 
 export default function Document() {
   return (
