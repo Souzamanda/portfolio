@@ -26,7 +26,7 @@ export default function Home() {
           property='og:description'
           content='Hello! I am a Software Engineer and in this portfolio I show some of my projects'
         />
-        <meta property='og:image' content='ogimage.png' />
+        <meta property='og:image' content='/ogimage.png' />
 
         {/* Twitter Meta Tags */}
         <meta name='twitter:card' content='summary_large_image' />
@@ -35,7 +35,7 @@ export default function Home() {
           name='twitter:description'
           content='Hello! I am a Software Engineer and in this portfolio I show some of my projects'
         />
-        <meta name='twitter:image' content='ogimage.png' />
+        <meta name='twitter:image' content='/ogimage.png' />
       </Head>
       <Main />
       <About />
