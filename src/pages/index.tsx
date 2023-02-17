@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import Head from 'next/head';
 import { Inter } from '@next/font/google';
 import About from '@/components/About';
@@ -12,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Amanda Souza's Portfolio</title>
+        <title>Amanda Souza`&#x27;`s Portfolio</title>
         <meta
           name='description'
           content='Hello! I am a Software Engineer and in this portfolio I show some of my projects'
@@ -26,7 +25,7 @@ export default function Home() {
           property='og:description'
           content='Hello! I am a Software Engineer and in this portfolio I show some of my projects'
         />
-        <meta property='og:image' content='/ogimage.png' />
+        <meta property='og:image' content='../assets/ogimage.png' />
 
         {/* Twitter Meta Tags */}
         <meta name='twitter:card' content='summary_large_image' />
@@ -35,7 +34,7 @@ export default function Home() {
           name='twitter:description'
           content='Hello! I am a Software Engineer and in this portfolio I show some of my projects'
         />
-        <meta name='twitter:image' content='/ogimage.png' />
+        <meta name='twitter:image' content='../assets/ogimage.png' />
       </Head>
       <Main />
       <About />
