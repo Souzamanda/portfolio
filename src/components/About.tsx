@@ -14,16 +14,16 @@ const About = () => {
           '>
             About me
           </h2>
-          <div className='py-8'>
+          <div className='py-8 text-justify md:pr-5 lg:pr-8'>
             <p className='py-2 text-lg text-gray-600 bg-white dark:bg-purple-700 dark:text-gray-100'>
               Hello!! I am a Software Engineer graduated at Centennial College
-              in Toronto, Canada, but now I am back in Brazil, my home country.
+              in Toronto, Canada, but now I am back home, in Brazil.
             </p>
 
             <p className='py-2 text-lg text-gray-600 bg-white dark:bg-purple-700 dark:text-gray-100'>
               I am motivated, focused, and passionate about learning new things.
-              My degree abroad allowed me to increase my fluency in the English
-              language, improving my verbal and written communication.
+              My degree abroad allowed me to increase my fluency in English, 
+              improving my verbal and written communication.
             </p>
 
             <p className='py-2 text-lg text-gray-600 bg-white dark:bg-purple-700 dark:text-gray-100'>
